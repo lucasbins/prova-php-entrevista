@@ -17,8 +17,8 @@ class ColorUserController {
     return $this->listUserColor;
   }
 
-  public function setUserColor($user_id, $color_id){
-    $createUserColor = $this->userColor->setUserColor($user_id,$color_id);
+  public function setColorUser($user_id, $color_id){
+    $createUserColor = $this->userColor->createUserColor($user_id,$color_id);
     $response = $createUserColor ? 'Cor vinculada com Sucesso' : 'Erro na vinculação da cor';
     return header("Location: ./create.php?id=$user_id&response=$response");
   }

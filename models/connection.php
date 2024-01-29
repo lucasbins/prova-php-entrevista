@@ -95,16 +95,14 @@ class Connection {
         
         $result = $stmt->fetchAll(PDO::FETCH_OBJ);
 
-        $stmt->closeCursor();
         return $result;
     }
 
-    public function setUserColor($id_user, $id_color){
-        $stmt = $this->connection->prepare('INSERT INTO user_colors (user_id, color_id) VALUES (:id_user,:id_color);');
-        $stmt->bindParam(':id_user', $id_user, PDO::PARAM_INT);
-        $stmt->bindParam(':id_color', $id_color, PDO::PARAM_INT);
+    public function createUserColor($id_user, $id_color){
+        $data = array($id_user,$id_color);
+        $stmt = $this->connection->prepare('INSERT INTO user_colors (user_id, color_id) VALUES (?,?);');
 
-        if( $stmt->execute() == TRUE){
+        if( $stmt->execute($data) == TRUE){
             return true;
         }else{
             return false;

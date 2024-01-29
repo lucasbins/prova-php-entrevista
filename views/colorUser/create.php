@@ -17,7 +17,7 @@
   $listColors = $colorController->getAllColors();
 
   if(isset($_POST["color_id"]) && isset($_POST["user_id"]))
-      $colorUserController->setUserColor($_POST["user_id"],$_POST["color_id"]);
+      $colorUserController->setColorUser($_POST["user_id"],$_POST["color_id"]);
 
   
 

@@ -12,7 +12,6 @@
                             <td scope='row'>%s</td>
                             <td>%s</td>
                             <td>%s</td>
-                            <td>cores</td>
                             <td>
                             <a class='btn btn-warning text-white' href='../colorUser/create.php?id=%s'>Vincular Cor</a>
                                 <a class='btn btn-primary text-white' href='./edit.php?id=%s'>Editar</a>
@@ -45,7 +44,6 @@
               <th scope='col'>ID</th>
               <th scope='col'>Nome</th>
               <th scope='col'>Email</th>
-              <th scope='col'>Cores</th>
               <th scope='col'>Acões</th>
           </tr>
       </thead>
